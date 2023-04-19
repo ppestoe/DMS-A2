@@ -1,0 +1,120 @@
+<html>
+
+<head>
+    
+<title>
+    My First Website
+</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.1/buzz.min.js"></script>
+<!-- container1= mid vertical row, 2= mid horizontal row, 3= left 2, 4= right 2
+-->
+<style>
+    
+    .container1{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 80px;
+    }
+    .container2{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: -400px;
+    }
+    .container3{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: -250px;
+        margin-left: -500px;
+    
+    
+    }
+    .container4{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: -260px;
+        margin-left: 450px;
+    }
+    .item{
+
+        flex: none;
+        align-self: center;
+    }
+    .container img {
+        width: 180px;
+        height: 180px;
+        padding: 30px;
+        margin-left: 3px;
+      }
+
+</style>
+
+</head>
+
+</body>
+
+<body>
+   
+ <div class="container1">
+<div class="item img"><img id="img4" src="img/heaven.png" height="200"  onmousedown="this.src='img/cheaven.png'" onmouseup="this.src='img/heaven.png'"></div>
+<div class="item img"><img src="img/block.png" height="180" alt="none"></div>
+<div class="item img"><img id="img6" src="img/hell.png" height="200"  onmousedown="this.src='img/chell.png'" onmouseup="this.src='img/hell.png'"></div>
+ </div>
+
+ <div class="container2">
+    <div class="item"><img id="img1" src="img/pride.png" height="200"  onmousedown="this.src='img/cpride.png'" onmouseup="this.src='img/pride.png'"></div>
+    <div class="item"><img src="img/block.png" alt="none" width="240"></div>
+    <div class="item"><img id="img5" src="img/envy.png" height="200"  onmousedown="this.src='img/cenvy.png'" onmouseup="this.src='img/envy.png'"></div>
+    <div class="item"><img src="img/block.png" alt="none" width="250"></div>
+    <div class="item"><img id="img9" src="img/sloth.png" height="200"  onmousedown="this.src='img/csloth.png'" onmouseup="this.src='img/sloth.png'"></div>
+ </div>
+
+ <div class="container3">
+    <div class="item img"><img id="img2" src="img/lust.png" height="140" onmousedown="this.src='img/clust.png'" onmouseup="this.src='img/lust.png'"></div>
+    <div class="item img"><img id="img3" src="img/gluttony.png" height="140"  onmousedown="this.src='img/cgluttony.png'" onmouseup="this.src='img/gluttony.png'"></div>
+     </div>
+
+<div class="container4">
+    <div class="item img"><img id="img7" src="img/greed.png" height="140" onmousedown="this.src='img/cgreed.png'" onmouseup="this.src='img/greed.png'"></div>
+    <div class="item img"><img id="img8" src="img/wrath.png" height="140" onmousedown="this.src='img/cwrath.png'" onmouseup="this.src='img/wrath.png'"></div>
+        </div>
+    
+
+
+           
+        <script>
+            var sound1 = new buzz.sound("sound/pride.mp3");
+            var sound2 = new buzz.sound("sound/lust.mp3");
+            var sound3 = new buzz.sound("sound/gluttony.mp3");
+            var sound4 = new buzz.sound("sound/heaven.mp3");
+            var sound5 = new buzz.sound("sound/quack.mp3");
+            var sound6 = new buzz.sound("sound/hell.mp3");
+            var sound7 = new buzz.sound("sound/greed.mp3");
+            var sound8 = new buzz.sound("sound/wrath.mp3");
+            var sound9 = new buzz.sound("sound/sloth.mp3");
+     
+            window.onload = function() {
+                document.getElementById('img1').addEventListener('mousedown', function () {sound1.play(); });  
+                document.getElementById('img2').addEventListener('mousedown', function () {sound2.play(); });
+                document.getElementById('img3').addEventListener('mousedown', function () {sound3.play(); });
+                document.getElementById('img4').addEventListener('mousedown', function () {sound4.play(); });
+                document.getElementById('img5').addEventListener('mousedown', function () {sound5.play(); }); 
+                document.getElementById('img6').addEventListener('mousedown', function () {sound6.play(); }); 
+                document.getElementById('img7').addEventListener('mousedown', function () {sound7.play(); }); 
+                document.getElementById('img8').addEventListener('mousedown', function () {sound8.play(); }); 
+                document.getElementById('img9').addEventListener('mousedown', function () {sound9.play(); });
+            }  
+        </script> 
+
+</html>
